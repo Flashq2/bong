@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        float: left;
+    }
+</style>
+<body>
+    <div class="id">
+         <img src="f4.jpg" alt="">
+    </div>
+   
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+       var thiss='';
+    for(var i=1;i<10000;i++){
+        thiss+=`  <img src="f4.jpg" alt="">`;
+    }  
+    $('.id').append(thiss)
+    });
+
+   
+</script>
+</html>
