@@ -13,22 +13,32 @@
         object-fit: contain;
         float: left;
     }
+    audio{
+        width: 100%;
+        height: 60px;
+    }
 </style>
 <body>
-    <div class="id">
-         <img src="f4.jpg" alt="">
+     <audio  controls autoplay>
+    <source src="mission-impossible-kazoo-66628.mp3">
+    Your browser does not support the audio element.
+  </audio>
+    <div class="id" id="demo">
+     
+        
     </div>
    
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function () {
-       var thiss='';
-    for(var i=1;i<10000;i++){
-        thiss+=`  <img src="f4.jpg" alt="">`;
-    }  
-    $('.id').append(thiss)
+    
     });
+const element = document.getElementById("demo");
+setInterval(function() {element.innerHTML+=`
+    <img src="f4.jpg" alt="">
+    `
+}, 10);
 
    
 </script>
